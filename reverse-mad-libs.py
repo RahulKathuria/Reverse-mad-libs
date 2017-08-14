@@ -61,21 +61,21 @@ def playing_level():
 
     level = \
         raw_input('''Enter
-1 for level 1
-2 for level 2
-3 for level 3
-4 for level 4
+easy for level 1
+medium for level 2
+hard for level 3
+master for level 4
 ''')
-    if level == '1':
+    if level == 'easy':
         print str(level_1)
         start_game(level_1, level_1_answers)
-    elif level == '2':
+    elif level == 'medium':
         print level_2
         start_game(level_2, level_2_answers)
-    elif level == '3':
+    elif level == 'hard':
         print str(level_3)
         start_game(level_3, level_3_answers)
-    elif level == '4':
+    elif level == 'master':
         print str(level_4)
         start_game(level_4, level_4_answers)
 
@@ -87,7 +87,9 @@ def start_game(ques_string, answer_list):
 ....level entered by the user is passed in this function. The function returns nothing.
  ....'''
 
-    i = 0
+     # length_check variable is used to iterate the loop
+
+    length_check = 0
 
         # count variable is used to count the number of wrong attempts given to the user.
 
@@ -100,12 +102,12 @@ def start_game(ques_string, answer_list):
         # flag1 variable is used as a parameter inside the flag function
 
     flag1 = 1
-    while i < len(answer_list):
+    while length_check < len(answer_list):
         answer = raw_input('What should be the answer to blank __'
-                           + str(i + 1) + '__ ?\n')
-        if is_correct(answer, answer_list[i]):
-            update = update_ques_string(update, i, answer)
-            i = i + 1
+                           + str(length_check + 1) + '__ ?\n')
+        if is_correct(answer, answer_list[length_check]):
+            update = update_ques_string(update, length_check, answer)
+            length_check = length_check + 1
         else:
             count = count - 1
             print 'Wrong answer, Try again, ' + str(count) \
@@ -163,3 +165,5 @@ def update_ques_string(question, blank_index, user_answer):
 
 
 playing_level()
+
+
