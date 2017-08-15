@@ -78,6 +78,9 @@ master for level 4
     elif level == 'master':
         print str(level_4)
         start_game(level_4, level_4_answers)
+    else:
+        print 'You entered a wrong choice!!, please enter a correct one\n'
+        playing_level()
 
 
 def start_game(ques_string, answer_list):
@@ -112,7 +115,8 @@ def start_game(ques_string, answer_list):
             count = count - 1
             print 'Wrong answer, Try again, ' + str(count) \
                 + ' attempts remaining.'
-            if count < 1:
+            max_attempts = 1
+            if count < max_attempts:
                 flag1 = 0
                 break
     flag(flag1)
@@ -124,7 +128,8 @@ def flag(input):
  ....the Winning and loosing message and returns nothing.
 ....'''
 
-    if input == 0:
+    default_flag = 0
+    if input == default_flag:
         print 'Sorry, You lost!!'
     else:
         print 'All the answers were correct!!'
@@ -167,3 +172,4 @@ def update_ques_string(question, blank_index, user_answer):
 playing_level()
 
 
+			
