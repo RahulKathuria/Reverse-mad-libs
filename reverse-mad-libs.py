@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+
 
 # Question string for level 1
 
@@ -12,7 +11,7 @@ Narendra Damodardas __1__ , born 17 September 1950 is an Indian politician who i
 
 # Answer for level 1
 
-level_1_answers = ['Modi', 'India', 'Gujarat', 'Parliament', 'Party']
+level_1_answers = ['modi', 'india', 'gujarat', 'parliament', 'party']
 
 # Question string for level 2
 
@@ -25,7 +24,7 @@ level_2 = \
 
 # Answer for level 2
 
-level_2_answers = ['Google', 'Linux', 'interface', 'touch', 'keyboard']
+level_2_answers = ['google', 'linux', 'interface', 'touch', 'keyboard']
 
 # Question string for level 3
 
@@ -37,7 +36,7 @@ level_3 = \
 
 # Answer for level 3
 
-level_3_answers = ['social', 'Mark', 'Harvard', 'Dustin', 'Chris']
+level_3_answers = ['social', 'mark', 'harvard', 'dustin', 'chris']
 
 # question string for level 4
 
@@ -56,7 +55,6 @@ def playing_level():
     '''
 ....The function has no input parameter but asks the user for entering the level and then returns the
 ....respective level selected by the user.
-
 ....'''
 
     level = \
